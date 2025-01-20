@@ -5,8 +5,8 @@ let friends = [];
 function addName (name)  {
 	friends.push(name);
 };
-function cleanInput (firendNameInput){
-	firendNameInput.value = '';
+function cleanInput (friendNameInput){
+	friendNameInput.value = '';
 };
 function validateName (name) {
 	if(name.length < 1) {
@@ -18,7 +18,7 @@ function validateName (name) {
 };
 
 function agregarAmigo () {
-	const firendNameInput = document.getElementById('amigo');
-	validateName(firendNameInput.value);
-	cleanInput(firendNameInput);
+	const friendNameInput = document.getElementById('amigo');
+	validateName(friendNameInput.value);
+	cleanInput(friendNameInput);
 };
