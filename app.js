@@ -17,8 +17,20 @@ function validateName (name) {
 	}
 };
 
+
+function updateFriendList () {
+	const friendList = document.getElementById('listaAmigos');
+	friendList.innerHTML = '';
+	for( let friend of friends){
+        const listName = document.createElement('li');
+        listName.textContent = friend;
+        friendList.appendChild(listName);
+	}
+}
+
 function agregarAmigo () {
 	const friendNameInput = document.getElementById('amigo');
 	validateName(friendNameInput.value);
 	cleanInput(friendNameInput);
+	updateFriendList();
 };
